@@ -1,63 +1,219 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item active">      
-      <a class="nav-link" [routerLink]="['home']">Home</a>
-    </li>
-     <!-- Dropdown -->
-     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        About Us
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Administration</a>
-        <a class="dropdown-item" href="#">Reports</a>
-        <a class="dropdown-item" href="#">RTI</a>
-        <a class="dropdown-item" href="#">Downloads</a>
-        <a class="dropdown-item" href="#">Information Center</a>
-        <a class="dropdown-item" href="#">District Offices</a>
+<style>
+  h1 small {
+      padding: 2px 0px 0px 0px !important;
+      margin: 0px !important;
+      font-weight: bold;
+      font-size: 14px;
+      color: #fff !important;
+  }
+  h1 {
+      padding: 5px 0px 0px 0px !important;
+      margin: 0px !important;
+      font-weight: bold;
+      font-size: 30px;
+      color: #fff;
+      margin: 0 0;
+  }
+  p{
+    font-size: 14px;
+      font-weight: 400;
+  }
+  .list-inline >li{
+    display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+  }
+  .list-inline {
+      padding-left: 0;
+      margin-left: -5px;
+      list-style: none;
+  }
+  .gov{
+    padding:0 20px;
+  }
+  .pull-right {
+      float: right!important;
+  }
+  .navbar-nav >li>a{
+    font-weight: bold;
+    color:#fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .login-btn{
+    border: 1px solid white;
+    padding: 8px 12px 8px 12px !important;
+    margin: 5px 15px;
+  }
+  h1[_ngcontent-c1] {
+      padding: 2px 0px 0px 0px !important;
+  }
+  .pull-right {
+    float: right;}
+
+.pull-right {
+    float: right!important; 
+}
+.pull-right[_ngcontent-c1] {
+    float: right!important;
+}
+  </style>
+  <div class="container-fluid a1" style="background: #deddde url('assets/bg.jpg') repeat-x;color:#fff">
+    <div class="row">
+      <div style="width:100%">
+      
+      
+        <ul class="list-inline pull-right" style="margin-bottom:10px;">
+          <li><a class=" text-white" href="index_en.asp"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+          <li><a class="kannada text-white" href="index_kan.asp"><i class="glyphicon glyphicon-refresh">
+          </i>Kannada </a></li>
+  
+  
+          <!--- switch by syam -->
+          <li>
+            <!-- <a href="javascript:chooseStyle('accessibility', 60)" class="text-white" >
+             <i class="glyphicon glyphicon-adjust"></i>
+             </a> -->
+  
+            <a class="decreaseFont text-white">
+             <i class="glyphicon glyphicon-font minus"></i>
+             </a>
+  
+             
+            <a class="increaseFont text-white">
+             <i class="glyphicon glyphicon-font plus"></i>
+             </a>
+             <a href="javascript:window.print();" class="text-white">
+             <i class="glyphicon glyphicon-print"></i>
+             </a>
+  
+             </li>
+  
+            <!-- switch ends here -->
+                                                    
+        </ul>
+      </div>
+    </div>
+    
+      <!-- Example row of columns -->
+      <div class="row" >
+        <div class="col-md-3 vmid text-center gov">
+      
+    <img src="assets/cmk-eng.jpg" alt="logo" width="130px" height="148px">
+    <p>Sri H D Kumaraswamy<br> Hon'ble Chief Minister | Government of Karnataka </p>
+    </div>
+    
+     <div class="col-md-7 title text-center">
+                 <img src="assets/logo govtk.jpg" alt="logo" width="100px" height="100px">
+     <!--<h1><h1 class="sub"><small>Government of Karnataka</small></h1>-->
+     <h1></h1><h1 class="sub"><small>Minority Welfare Department</small></h1>
+     <h1>Book My Hall</h1>
+  <h1></h1><h1 class="sub"><small>Karnataka</small></h1>
+    
+    </div>
+    
+    <div class="col-md-2 vmid text-center gov" style="padding: 0 0">
+                <img src="assets/mmwd1.jpg" alt="logo" width="130px" height="148px">
+                <p>Sri B Z Zameer Ahmed Khan<br> Hon'ble Minister of Minorities Welfare,Haj &amp; Wakf Board </p>
+      <!-- 
+      <div class="row">
         
+        <div>
+          <button type="submit" class="btn btn-warning helpline"><i class="fa fa-phone "></i>HELPLINE</button>  
+         </div>		
       </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Administration</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Reports</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">RTI</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Downloads</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Information Center</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">District Offices</a>
-    </li>
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Media
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Administration</a>
-        <a class="dropdown-item" href="#">Reports</a>
-        <a class="dropdown-item" href="#">RTI</a>
-        <a class="dropdown-item" href="#">Downloads</a>
-        <a class="dropdown-item" href="#">Information Center</a>
-        <a class="dropdown-item" href="#">District Offices</a>        
+      -->
+    </div>
+    
+    
+    </div>
+  </div>
+  
+  
+  
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="padding-left:5%;padding-top: 0;padding-bottom: 0">
+    <ul class="navbar-nav">
+      <li class="nav-item active">      
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+       <!-- Dropdown -->
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          About Us
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Administration</a>
+          <a class="dropdown-item" href="#">Reports</a>
+          <a class="dropdown-item" href="#">RTI</a>
+          <a class="dropdown-item" href="#">Downloads</a>
+          <a class="dropdown-item" href="#">Information Center</a>
+          <a class="dropdown-item" href="#">District Offices</a>
+          
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Administration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Reports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">RTI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Downloads</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Information Center</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">District Offices</a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Media
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Administration</a>
+          <a class="dropdown-item" href="#">Reports</a>
+          <a class="dropdown-item" href="#">RTI</a>
+          <a class="dropdown-item" href="#">Downloads</a>
+          <a class="dropdown-item" href="#">Information Center</a>
+          <a class="dropdown-item" href="#">District Offices</a>        
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Online Applications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">PMU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link login-btn" href="#">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="row">
+      <div class="col-md-1 text-white">
+        <i class="fa fa-quote-left pull-right text-black"></i>
       </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Online Applications</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">PMU</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">FAQ</a>
-    </li>
-  </ul>
-</nav>
+      <div class="col-md-10 text-red">
+  
+        <marquee onmouseover="this.stop()" onmouseout="this.start()">	 
+            Civilization can be judged by the way it treats its Minorities - <label class="bold "> Mahatma Gandhiji</label>
+            <i class="fa fa-child qbigger"></i>
+            Education is the most powerful weapon which you can use to change the world - <label class="bold "> Nelson Mandela</label>
+            <i class="fa fa-child qbigger"></i>
+            An investment in knowledge pays the best interest - <label class="bold "> Benjamin Franklin</label>
+            <i class="fa fa-child qbigger"></i>
+            The roots of education are bitter, but the fruit is sweet - <label class="bold "> Aristotle</label>
+        </marquee>		 
+      </div>
+      <div class="col-md-1 text-white">
+        <i class="fa fa-quote-right text-black"></i>
+      </div>
+    </div>
