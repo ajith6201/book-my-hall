@@ -5,19 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BookmyhallHomeComponent } from './bookmyhall-home/bookmyhall-home.component';
+import { BookmyhallAboutusComponent } from './bookmyhall-aboutus/bookmyhall-aboutus.component';
+import { BookmyhallVisionMissionComponent } from './bookmyhall-vision-mission/bookmyhall-vision-mission.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BookmyhallHomeComponent
+    BookmyhallHomeComponent,
+    BookmyhallAboutusComponent,   
+    BookmyhallVisionMissionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    AngularFontAwesomeModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })

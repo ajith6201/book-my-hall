@@ -1,63 +1,4 @@
-<style>
-  h1 small {
-      padding: 2px 0px 0px 0px !important;
-      margin: 0px !important;
-      font-weight: bold;
-      font-size: 14px;
-      color: #fff !important;
-  }
-  h1 {
-      padding: 5px 0px 0px 0px !important;
-      margin: 0px !important;
-      font-weight: bold;
-      font-size: 30px;
-      color: #fff;
-      margin: 0 0;
-  }
-  p{
-    font-size: 14px;
-      font-weight: 400;
-  }
-  .list-inline >li{
-    display: inline-block;
-      padding-right: 5px;
-      padding-left: 5px;
-  }
-  .list-inline {
-      padding-left: 0;
-      margin-left: -5px;
-      list-style: none;
-  }
-  .gov{
-    padding:0 20px;
-  }
-  .pull-right {
-      float: right!important;
-  }
-  .navbar-nav >li>a{
-    font-weight: bold;
-    color:#fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .login-btn{
-    border: 1px solid white;
-    padding: 8px 12px 8px 12px !important;
-    margin: 5px 15px;
-  }
-  h1[_ngcontent-c1] {
-      padding: 2px 0px 0px 0px !important;
-  }
-  .pull-right {
-    float: right;}
 
-.pull-right {
-    float: right!important; 
-}
-.pull-right[_ngcontent-c1] {
-    float: right!important;
-}
-  </style>
   <div class="container-fluid a1" style="background: #deddde url('assets/bg.jpg') repeat-x;color:#fff">
     <div class="row">
       <div style="width:100%">
@@ -138,12 +79,12 @@
       </li>
        <!-- Dropdown -->
        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >
           About Us
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Administration</a>
-          <a class="dropdown-item" href="#">Reports</a>
+          <a class="dropdown-item" href="#" [routerLink]="['aboutus']">Administration</a>
+          <a class="dropdown-item" href="#" [routerLink]="['vision-mission']">Reports</a>
           <a class="dropdown-item" href="#">RTI</a>
           <a class="dropdown-item" href="#">Downloads</a>
           <a class="dropdown-item" href="#">Information Center</a>
