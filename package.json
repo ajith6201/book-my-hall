@@ -8,8 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod",
-    "deploy": "ng build --prod --base-href https://ajith6201.github.io/book-my-hall/ && angular-cli-ghpages --branch gh-pages"
+    "postinstall": "ng build --prod"    
   },
   "private": true,
   "dependencies": {
