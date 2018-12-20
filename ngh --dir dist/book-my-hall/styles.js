@@ -639,9 +639,9 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Ajith J\book-my-hall\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! C:\Users\Ajith J\book-my-hall\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\Ajith J\book-my-hall\node_modules\font-awesome\css\font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
+__webpack_require__(/*! /home/developer/ang/book-my-hall/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /home/developer/ang/book-my-hall/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/developer/ang/book-my-hall/node_modules/font-awesome/css/font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
 
 
 /***/ })
