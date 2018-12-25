@@ -9,6 +9,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BookmyhallHomeComponent } from './bookmyhall-home/bookmyhall-home.component';
 import { BookmyhallAboutusComponent } from './bookmyhall-aboutus/bookmyhall-aboutus.component';
 import { BookmyhallVisionMissionComponent } from './bookmyhall-vision-mission/bookmyhall-vision-mission.component';
+import { BookmyhallRtiComponent } from './bookmyhall-rti/bookmyhall-rti.component';
+import { BookmyhallDownloadsComponent } from './bookmyhall-downloads/bookmyhall-downloads.component';
+import { BookmyhallInformationCenterComponent } from './bookmyhall-information-center/bookmyhall-information-center.component';
+import { BookmyhallDistrictOfficesComponent } from './bookmyhall-district-offices/bookmyhall-district-offices.component';
+import { BookmyhallPmuComponent } from './bookmyhall-pmu/bookmyhall-pmu.component';
+import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-applications/bookmyhall-online-applications.component';
+import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,14 @@ import { BookmyhallVisionMissionComponent } from './bookmyhall-vision-mission/bo
     FooterComponent,
     BookmyhallHomeComponent,
     BookmyhallAboutusComponent,   
-    BookmyhallVisionMissionComponent
+    BookmyhallVisionMissionComponent, 
+    BookmyhallRtiComponent, 
+    BookmyhallDownloadsComponent, 
+    BookmyhallInformationCenterComponent, 
+    BookmyhallDistrictOfficesComponent, 
+    BookmyhallPmuComponent, 
+    BookmyhallOnlineApplicationsComponent,
+    BookmyhallLoginComponent
   ],
   imports: [
     BrowserModule,

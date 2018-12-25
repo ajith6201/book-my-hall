@@ -29,3 +29,29 @@ h2 {
     color: #ccc;
     content: "/\00a0";
 }
+.text-green {
+    color: #00a65a !important;
+}
+.text-blue {
+    color: #0073b7 !important;
+}
+.text-orange {
+    color: #ff851b !important;
+}
+b, strong {
+    font-weight: 700;
+    font-size: 14px;
+}
+.fa{
+    font-family: FontAwesome;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a {
+    font-family: 'Open sans' , Sans-Serif;
+    font-size: 14px;
+    font-weight: 400;
+}

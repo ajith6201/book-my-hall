@@ -3,8 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookmyhallHomeComponent } from './bookmyhall-home/bookmyhall-home.component';
 import { BookmyhallAboutusComponent } from './bookmyhall-aboutus/bookmyhall-aboutus.component';
 import { BookmyhallVisionMissionComponent } from './bookmyhall-vision-mission/bookmyhall-vision-mission.component';
-
-
+import { BookmyhallRtiComponent } from './bookmyhall-rti/bookmyhall-rti.component';
+import { BookmyhallDownloadsComponent } from './bookmyhall-downloads/bookmyhall-downloads.component';
+import { BookmyhallInformationCenterComponent } from './bookmyhall-information-center/bookmyhall-information-center.component';
+import { BookmyhallDistrictOfficesComponent } from './bookmyhall-district-offices/bookmyhall-district-offices.component';
+import { BookmyhallPmuComponent } from './bookmyhall-pmu/bookmyhall-pmu.component';
+import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-applications/bookmyhall-online-applications.component';
+import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
 const routes: Routes = 
 [
   {
@@ -18,6 +23,30 @@ const routes: Routes =
   },
   {
     path:'vision-mission',component:BookmyhallVisionMissionComponent
+  },
+  {
+    path:'rti',component:BookmyhallRtiComponent
+  }
+  ,
+  {
+    path:'downloads',component:BookmyhallDownloadsComponent, 
+  }
+  ,
+  {
+    path:'information-center',component:BookmyhallInformationCenterComponent
+  }
+  ,
+  {
+    path:'district-offices',component:BookmyhallDistrictOfficesComponent
+  },
+  {
+    path:'pmu',component:BookmyhallPmuComponent
+  },
+  {
+    path:'online-applications',component:BookmyhallOnlineApplicationsComponent
+  },
+  {
+    path:'login',component:BookmyhallLoginComponent
   }
   
 ];

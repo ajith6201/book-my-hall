@@ -85,30 +85,30 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#" [routerLink]="['aboutus']">Administration</a>
           <a class="dropdown-item" href="#" [routerLink]="['vision-mission']">Reports</a>
-          <a class="dropdown-item" href="#">RTI</a>
-          <a class="dropdown-item" href="#">Downloads</a>
-          <a class="dropdown-item" href="#">Information Center</a>
-          <a class="dropdown-item" href="#">District Offices</a>
+          <a class="dropdown-item" href="#" [routerLink]="['rti']">RTI</a>
+          <a class="dropdown-item" href="#" [routerLink]="['downloads']">Downloads</a>
+          <a class="dropdown-item" href="#" [routerLink]="['information-center']">Information Center</a>
+          <a class="dropdown-item" href="#" [routerLink]="['district-offices']">District Offices</a>
           
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Administration</a>
+        <a class="nav-link" href="#" >Administration</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Reports</a>
+        <a class="nav-link" href="#" [routerLink]="['vision-mission']">Reports</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">RTI</a>
+        <a class="nav-link" href="#" [routerLink]="['rti']">RTI</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Downloads</a>
+        <a class="nav-link" href="#" [routerLink]="['downloads']">Downloads</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Information Center</a>
+        <a class="nav-link" href="#" [routerLink]="['information-center']">Information Center</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">District Offices</a>
+        <a class="nav-link" href="#" [routerLink]="['district-offices']">District Offices</a>
       </li>
       <!-- Dropdown -->
       <li class="nav-item dropdown">
@@ -125,16 +125,16 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Online Applications</a>
+        <a class="nav-link" href="#" [routerLink]="['online-applications']" >Online Applications</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">PMU</a>
+        <a class="nav-link" [routerLink]="['pmu']">PMU</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">FAQ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link login-btn" href="#">Login</a>
+        <a class="nav-link login-btn" [routerLink]="['login']">Login</a>
       </li>
     </ul>
   </nav>
