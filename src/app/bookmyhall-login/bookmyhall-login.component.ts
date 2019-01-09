@@ -13,3 +13,4 @@ export class BookmyhallLoginComponent implements OnInit {
   }
 
 }
+
