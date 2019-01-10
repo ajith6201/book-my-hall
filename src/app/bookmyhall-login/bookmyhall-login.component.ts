@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-bookmyhall-login',
@@ -13,4 +14,3 @@ export class BookmyhallLoginComponent implements OnInit {
   }
 
 }
-
