@@ -37,6 +37,8 @@
     "heroku-cli": "^7.0.9",
     "jquery": "^3.3.1",
     "jsonwebtoken": "^8.4.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.3",
     "mysql": "github:mysqljs/mysql",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",

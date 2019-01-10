@@ -47,9 +47,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(bodyParser.json());
-var routes = require('./app/routes/appRouter.js');
-routes(app);
 
 // Serve static files
 app.use(express.static(__dirname + '/dist/book-my-hall'));

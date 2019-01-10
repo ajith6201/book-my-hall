@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule  } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +17,8 @@ import { BookmyhallDistrictOfficesComponent } from './bookmyhall-district-office
 import { BookmyhallPmuComponent } from './bookmyhall-pmu/bookmyhall-pmu.component';
 import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-applications/bookmyhall-online-applications.component';
 import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
+import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
+import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,17 @@ import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.co
     BookmyhallDistrictOfficesComponent, 
     BookmyhallPmuComponent, 
     BookmyhallOnlineApplicationsComponent,
-    BookmyhallLoginComponent
+    BookmyhallLoginComponent,
+    BookmyhallRegistrationComponent,
+    BookmyhallProfileComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule  ],
+    AngularFontAwesomeModule,
+    FormsModule,
+    HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
