@@ -1,3 +1,5 @@
+import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
+import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookmyhallHomeComponent } from './bookmyhall-home/bookmyhall-home.component';
@@ -47,8 +49,13 @@ const routes: Routes =
   },
   {
     path:'login',component:BookmyhallLoginComponent
+  },
+  {
+    path:'register',component:BookmyhallRegistrationComponent
+  },
+  {
+    path:'profile',component:BookmyhallProfileComponent
   }
-  
 ];
 
 @NgModule({
