@@ -42,8 +42,9 @@ form {    border: 3px solid #f1f1f1;
 .loginheader{
   padding: 2%;
   color: #007bff;
-  border-bottom: 1px solid;
   margin-bottom: 17px;
+  padding-bottom: 0;
+  text-align: center;
 }
 .span-ico{
   background: #0277f9c7;
