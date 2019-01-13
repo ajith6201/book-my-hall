@@ -1,8 +1,6 @@
+import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { AuthenticationService, TokenPayload } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
-
-import { $ } from 'protractor';
-
 import { Router } from '@angular/router';
 
 
@@ -13,6 +11,12 @@ import { Router } from '@angular/router';
 })
 export class BookmyhallLoginComponent implements OnInit {
 
+  loginForm:FormGroup = new FormGroup(
+    {
+      email: new FormControl(null,[Validators.email,Validators.required]),
+      password: new FormControl(null,Validators.required)
+    }
+  );
   credentials: TokenPayload = 
   {
     username: '',
@@ -24,12 +28,15 @@ export class BookmyhallLoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login() {
-    this.auth.login(this.credentials).subscribe(() => {
-      this.router.navigateByUrl('/profile');
-    }, (err) => {
-      console.error(err);
-    }); 
+  login() 
+  {
+    if(!this.loginForm.valid)
+    {
+      console.log("Invalid Login!");
+      return;      
+    }
+
+    console.log(JSON.stringify(this.loginForm.value));
   }
 
 }

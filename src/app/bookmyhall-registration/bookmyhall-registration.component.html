@@ -4,20 +4,30 @@
     <div class="col-md-6">
       <h1>Register</h1>
       <p class="lead">Already a member? Please <a routerLink="/login">log in</a> instead.</p>
-      <form (submit)="register()">
+      <form [formGroup]="registerForm">
         <div class="form-group">
-          <label for="name">Full name</label>
-          <input type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="credentials.firstname">
+          <label for="exampleInputEmail1">Email address</label>
+          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted"></small>
         </div>
         <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.username">
+            <label for="exampleInputUsername">Username</label>
+            <input formControlName="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="userHelp" placeholder="username">
+            <small id="userHelp" class="form-text text-muted"></small>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+          <label for="passwordInput">Password</label>
+          <input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
+          <small id="passHelp" class="form-text text-muted"></small>
         </div>
-        <button type="submit" class="btn btn-default">Register!</button>
+        <div class="form-group">
+            <label for="CpasswordInput">Confirm Password</label>
+            <input formControlName="cpass" type="password" class="form-control" id="CpasswordInput" aria-describedby="CpassHelp" placeholder="password">
+            <small id="CpassHelp" class="form-text text-muted"></small>
+          </div>
+        <div class="form-group" style="text-align:center;">
+            <button type="button" class="btn btn-dark" (click)="register()">Register</button>           
+        </div>
       </form>
     </div>
   </div>

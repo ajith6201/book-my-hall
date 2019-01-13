@@ -1,6 +1,7 @@
+import { UserService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-appli
 import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
 import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
 import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -43,9 +45,10 @@ import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-prof
     AppRoutingModule,
     AngularFontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,  
+    ReactiveFormsModule
     ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
