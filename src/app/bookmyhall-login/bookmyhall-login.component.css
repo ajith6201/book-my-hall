@@ -1,10 +1,10 @@
-form {border: 3px solid #f1f1f1;
-width:40%;
-margin-left: auto;
+form {    border: 3px solid #f1f1f1;
+  width: 40%;
+  margin-left: auto;
   margin-right: auto;
-  margin-top:2%;
+  margin-top: 2%;
   margin-bottom: 5%;
-  box-shadow: 0 -5px 30px 8px rgba(0,0,0,.07);
+  background: #f1f1f1;
 }
 .loginbtn{
   width: 35%;
@@ -40,12 +40,23 @@ margin-left: auto;
   cursor: pointer;
 }
 .loginheader{
-  padding: 5%;
-  background: #007bff;
-  color:#fff;
+  padding: 2%;
+  color: #007bff;
+  border-bottom: 1px solid;
+  margin-bottom: 17px;
+}
+.span-ico{
+  background: #0277f9c7;
+  border: 0px solid #0277f9c7;
+  color: white;
+  width: 45px !important;
+  height: 36px !important;
+  display: inline-table;
+  text-align: center;
+  padding: 13px;
 }
 input,textarea{
-    width: 100%;
+    width: 90% !important;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
