@@ -1,49 +1,25 @@
 
 
-<form id="loginposition">
-  <div class="loginheader">
-      <h1 style="text-align:center">Login</h1>
-  </div>
-  <div class="container ">
-    
-    
-    <div><span class="span-ico"><i class="fa fa-envelope"></i></span><input type="email" placeholder="Enter Email Id" name="Email" required>
+  <form [formGroup]="loginForm">
+      <div class="loginheader">
+          <h1 style="text-align:center">Login</h1>
       </div>
-      
-      <div><span class="span-ico"><i class="fa fa-lock"></i></span><input type="password" placeholder="Enter Password" name="psw" required>
-      </div>
-
-    <div class="text-align-center">
-    <button type="submit" class="loginbtn">Login</button>
-  </div>
-  <a class="register-link" (click)="Registerform()" >Don't have account Register</a>   
+    <div style="padding:15px 25px">
+    <div class="form-group">
     
-  </div>
-
-</form>
-<form id="registerposition">
-    <div class="loginheader">
-    <h1 style="text-align:center">Register</h1>
+      <span class="span-ico"><i class="fa fa-envelope"></i></span><input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted"></small>
     </div>
-    <div class="container ">
-      <div><span class="span-ico"><i class="fa fa-user"></i></span><input type="text" placeholder="Enter Username" name="uname" required>
-      </div>
+    <div class="form-group">
       
-      <div><span class="span-ico"><i class="fa fa-envelope"></i></span><input type="email" placeholder="Enter Email Id" name="Email" required>
-       </div>
-     
-       <div><span class="span-ico"><i class="fa fa-lock"></i></span><input type="password" placeholder="Enter Password" name="psw" required>
-       </div>
-
-       <div><span class="span-ico"><i class="fa fa-lock"></i></span><input type="password" placeholder="conform password" name="psw" required>
-       </div>
- 
-      <div class="text-align-center">
-      <button type="submit" class="loginbtn">Register Now</button>
-      </div>
-      <div class="text-align-center">
-      <a class="register-link" (click)="Loginform()"  style="cursor: pointer;text-align: right"><i class="fa fa-sign-in"></i> &nbsp;Login</a>
+      <span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
+      <small id="passHelp" class="form-text text-muted"></small>
     </div>
-  </div>
+
+    <div class="form-group" style="text-align:center;">
+        <button type="button" class="btn btn-dark loginbtn" (click)="login()">Log in</button>        
+    </div>
+    <a class="register-link" (click)="Registerform()" >Don't have account Register</a> 
+    </div>
   </form>
-  
+
