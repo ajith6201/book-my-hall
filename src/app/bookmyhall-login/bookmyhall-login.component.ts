@@ -31,5 +31,17 @@ export class BookmyhallLoginComponent implements OnInit {
       console.error(err);
     }); 
   }
+  Registerform()
+  {       
+      document.getElementById("loginposition").style.display="none";
+      document.getElementById("registerposition").style.display="block";
+    
+  }
+  Loginform()
+  {       
+      document.getElementById("loginposition").style.display="block";
+      document.getElementById("registerposition").style.display="none";
+  }
+
 
 }
