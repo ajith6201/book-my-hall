@@ -38,5 +38,17 @@ export class BookmyhallLoginComponent implements OnInit {
 
     console.log(JSON.stringify(this.loginForm.value));
   }
+  Registerform()
+  {       
+      document.getElementById("loginposition").style.display="none";
+      document.getElementById("registerposition").style.display="block";
+    
+  }
+  Loginform()
+  {       
+      document.getElementById("loginposition").style.display="block";
+      document.getElementById("registerposition").style.display="none";
+  }
+
 
 }

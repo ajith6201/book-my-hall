@@ -1,31 +1,43 @@
-<div class="container">
-
-  <div class="row">
+<form id="loginposition">
+  <div class="loginheader">
+      <h1 style="text-align:center">Login</h1>
+  </div>
+  <div class="container ">
     
-    <div class="col-md-6">
+    <label for="uname"  class="label"><i class="fa fa-user"></i>&nbsp;<b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
 
-
-      <h1 class="form-signin-heading">Sign in</h1>
-      <p class="lead">Not a member? Please <a routerLink="/register">register</a> instead.</p>
-  
-      <form [formGroup]="loginForm">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted"></small>
-        </div>
-        <div class="form-group">
-          <label for="passwordInput">Password</label>
-          <input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
-          <small id="passHelp" class="form-text text-muted"></small>
-        </div>
-  
-        <div class="form-group" style="text-align:center;">
-            <button type="button" class="btn btn-dark" (click)="login()">Log in</button>           
-        </div>
-      </form>
-
-    </div>
+    <label for="psw" class="label"><i class="fa fa-lock"></i>&nbsp;<b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <div class="text-align-center">
+    <button type="submit" class="loginbtn">Login</button>
+  </div>
+  <a class="register-link" (click)="Registerform()" >Don't have account Register</a>   
+    
   </div>
 
-</div>
+</form>
+<form id="registerposition">
+    <div class="loginheader">
+    <h1 style="text-align:center">Register</h1>
+    </div>
+    <div class="container ">
+      <label for="uname" class="label"><i class="fa fa-user"></i>&nbsp;<b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="email" class="label"><i class="fa fa-envelope"></i>&nbsp;<b>Email Id</b></label>
+      <input type="email" placeholder="Enter Email Id" name="Email" required>
+       
+      <label for="phno" class="label"><i class="fa fa-phone"></i>&nbsp;<b>phone number</b></label>
+      <input type="number" placeholder="Enter Phone number" name="Email" required>
+
+      <label for="address" class="label"><i class="fa fa-address-book"></i>&nbsp;<b>Address</b></label>
+      <textarea type="text" placeholder="Address.........." name="address" required></textarea>
+      <div class="text-align-center">
+      <button type="submit" class="loginbtn">Register Now</button>
+      </div>
+      <div class="text-align-center">
+      <a class="register-link" (click)="Loginform()"  style="cursor: pointer;text-align: right"><i class="fa fa-sign-in"></i> &nbsp;Login</a>
+    </div>
+  </div>
+  </form>
