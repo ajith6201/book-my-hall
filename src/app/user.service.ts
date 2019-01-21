@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -14,5 +14,23 @@ export class UserService {
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
     });
+  }
+
+  login(body:any){
+    return this._http.post('http://localhost:3000/users/login', body,{
+      observe:'body'
+    });
+  }
+
+  getUsername()
+  {
+    return this._http.get('http://localhost:3000/users/username',{
+    observe: 'body',
+    params: new HttpParams().append('token',localStorage.getItem('token'))
+    });
+  }
+  public get loggedIn():boolean
+  {
+    return (localStorage.getItem('token')!== null);
   }
 }

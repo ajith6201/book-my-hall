@@ -1,5 +1,6 @@
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService, UserDetails } from '../authentication.service';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookmyhall-profile',
@@ -7,16 +8,27 @@ import { AuthenticationService, UserDetails } from '../authentication.service';
   styleUrls: ['./bookmyhall-profile.component.css']
 })
 export class BookmyhallProfileComponent implements OnInit {
-  details: UserDetails;
-  constructor(private auth: AuthenticationService) { }
+
+  username = '';
+  loggedIn= '';
+  constructor(private UserService:UserService,private router:Router) {
+    this.UserService.getUsername().subscribe(
+      data=> this.username = data.toString(),
+      error=> router.navigate(['/login'])
+    );    
+   }
+
+  
+
+   logout()
+   {
+      localStorage.removeItem('token');
+      this.router.navigate(['/login']);
+   }
 
   ngOnInit() 
   {
-    this.auth.profile().subscribe(user => {
-      this.details = user;
-    }, (err) => {
-      console.error(err);
-    });
+   
   }
 
 }

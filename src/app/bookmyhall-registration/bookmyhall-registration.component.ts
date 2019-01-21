@@ -1,8 +1,9 @@
 import { UserService } from './../user.service';
-import { Router } from '@angular/router';
-import { AuthenticationService,TokenPayload } from './../authentication.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthenticationService } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,Validators } from '@angular/forms';
+import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/forms';
+import { isError } from 'util';
 
 
 @Component({
@@ -18,30 +19,56 @@ export class BookmyhallRegistrationComponent implements OnInit {
       password:new FormControl(null,Validators.required),
       cpass:new FormControl(null,Validators.required)
     });
-  credentials: TokenPayload = {
-    username: '',
-    firstname: '',
-    password: ''
-  };
-  constructor(private auth: AuthenticationService, private router: Router,private _UserService:UserService) { }
+
+    successMessage:String='';
+  constructor(private auth: AuthenticationService, private router: Router,private _UserService:UserService,private activatedroute:ActivatedRoute) { 
+    this.registerForm.controls.password.valueChanges.subscribe(
+      x=>this.registerForm.controls.cpass.updateValueAndValidity()
+    );
+  }
 
   ngOnInit() {
   }
 
+  isValid(controlName)
+  {
+    return this.registerForm.get(controlName).invalid && this.registerForm.get(controlName).touched;
+  }
+
+  passValidator(control:AbstractControl)
+  {
+    if(control && (control.value !==null || control.value !== undefined))
+    {
+      const cpassValue = control.value;
+
+      const passControl = control.root.get('password');
+      if(passControl)
+      {
+        const passValue = passControl.value;
+        if(passValue !== cpassValue || passValue === '')
+        {
+          return 
+          {
+            isError:true;
+          };
+        }
+      }
+    }
+    return null;
+  }
+
   register()
   {
-    if(!this.registerForm.valid || (this.registerForm.controls.password.value != this.registerForm.controls.cpass.value))
-    {
-      console.log("Invalid Form!");
-      return;
-    }
-    
-    this._UserService.register(JSON.stringify(this.registerForm.value))
+    this._UserService.register(this.registerForm.value)
     .subscribe(
-      data=>{console.log(data);this.router.navigate(['/login']);},
-      error=>console.error(error)
-    )
-    //console.log(JSON.stringify(this.registerForm.value));
+      data => this.successMessage = 'Registration Success',
+      error => this.successMessage = 'error'
+    );
+  }
+
+  movetologin()
+  {
+    this.router.navigate(['../login'],{relativeTo:this.activatedroute});
   }
 
 }

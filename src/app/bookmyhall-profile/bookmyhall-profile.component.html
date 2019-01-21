@@ -1,20 +1,25 @@
 <div class="container">
+    <button mat-raised-button color="primary" routerLinkActive="active" (click)="logout()" *ngIf="UserService.loggedIn">Logout</button>
+
   <div class="row">
     
-     <div class="col-md-6">
-
-      <h1 class="form-signin-heading">Your profile</h1>
-
-      <div class="form-horizontal">
+    <div class="col-md-6">
+      <form action="/action_page.php">
         <div class="form-group">
-          <label class="col-sm-3 control-label">Full name</label>
-          <p class="form-control-static">{{ details?.name }}</p>
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email">
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Email</label>
-          <p class="form-control-static">{{ details?.email }}</p>
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
         </div>
-      </div>
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6">
 
     </div>
 

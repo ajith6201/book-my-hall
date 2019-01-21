@@ -1,7 +1,8 @@
-import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { AuthenticationService, TokenPayload } from './../authentication.service';
+import { FormGroup,FormControl,Validators,AbstractControl } from '@angular/forms';
+import { AuthenticationService } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -17,26 +18,31 @@ export class BookmyhallLoginComponent implements OnInit {
       password: new FormControl(null,Validators.required)
     }
   );
-  credentials: TokenPayload = 
-  {
-    username: '',
-    password: ''
-  };
 
-  constructor(private auth: AuthenticationService, private router: Router) { }
+  constructor(private auth: AuthenticationService, private router: Router,private activatedroute:ActivatedRoute,private _UserService:UserService) { }
 
   ngOnInit() {
   }
 
-  login() 
+  isValid(controlName)
   {
-    if(!this.loginForm.valid)
-    {
-      console.log("Invalid Login!");
-      return;      
-    }
+    return this.loginForm.get(controlName).invalid && this.loginForm.get(controlName).touched;
+  }
 
-    console.log(JSON.stringify(this.loginForm.value));
+  login() {
+    console.log(this.loginForm.value);
+
+    if (this.loginForm.valid) {
+      this._UserService.login(this.loginForm.value)
+        .subscribe(
+          data => {
+            console.log(data);
+            localStorage.setItem('token', data.toString());
+            this.router.navigate(['/profile']);
+          },
+          error => { }
+        );
+    }
   }
   Registerform()
   {       
@@ -50,5 +56,8 @@ export class BookmyhallLoginComponent implements OnInit {
       document.getElementById("registerposition").style.display="none";
   }
 
-
+  movetoregister()
+  {
+    this.router.navigate(['../register'],{relativeTo:this.activatedroute});
+  }
 }

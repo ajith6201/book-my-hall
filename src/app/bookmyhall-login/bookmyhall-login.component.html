@@ -9,17 +9,19 @@
     
       <span class="span-ico"><i class="fa fa-envelope"></i></span><input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted"></small>
+      <span *ngIf="isValid('email')">Username cannot be blank</span>
     </div>
     <div class="form-group">
       
       <span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
       <small id="passHelp" class="form-text text-muted"></small>
+      <span *ngIf="isValid('password')">Password cannot be blank</span>
     </div>
 
     <div class="form-group" style="text-align:center;">
         <button type="button" class="btn btn-dark loginbtn" (click)="login()">Log in</button>        
     </div>
-    <a class="register-link" href="/register" >Don't have account Register</a> 
+    <a (click)="movetoregister()" >Don't have account Register</a> 
     </div>
   </form>
 
