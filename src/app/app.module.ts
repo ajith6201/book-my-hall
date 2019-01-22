@@ -20,6 +20,14 @@ import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-appli
 import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
 import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
 import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
+import { BookmyhallPhotoGalleryComponent } from './bookmyhall-photo-gallery/bookmyhall-photo-gallery.component';
+import { BookmyhallNewspaperComponent } from './bookmyhall-newspaper/bookmyhall-newspaper.component';
+import { BookmyhallMinisterProfileComponent } from './bookmyhall-minister-profile/bookmyhall-minister-profile.component';
+import { BookmyhallAssociatedOrganisationsComponent } from './bookmyhall-associated-organisations/bookmyhall-associated-organisations.component';
+import { BookmyhallWhosWhoComponent } from './bookmyhall-whos-who/bookmyhall-whos-who.component';
+import { BookmyhallDirectorsListComponent } from './bookmyhall-directors-list/bookmyhall-directors-list.component';
+import { BookmyhallCitizenCharterComponent } from './bookmyhall-citizen-charter/bookmyhall-citizen-charter.component';
+import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall-contact-us.component';
 
 
 @NgModule({
@@ -38,7 +46,15 @@ import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-prof
     BookmyhallOnlineApplicationsComponent,
     BookmyhallLoginComponent,
     BookmyhallRegistrationComponent,
-    BookmyhallProfileComponent    
+    BookmyhallProfileComponent,
+    BookmyhallPhotoGalleryComponent,
+    BookmyhallNewspaperComponent,
+    BookmyhallMinisterProfileComponent,
+    BookmyhallAssociatedOrganisationsComponent,
+    BookmyhallWhosWhoComponent,
+    BookmyhallDirectorsListComponent,
+    BookmyhallCitizenCharterComponent,
+    BookmyhallContactUsComponent  
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,15 @@ import { BookmyhallDistrictOfficesComponent } from './bookmyhall-district-office
 import { BookmyhallPmuComponent } from './bookmyhall-pmu/bookmyhall-pmu.component';
 import { BookmyhallOnlineApplicationsComponent } from './bookmyhall-online-applications/bookmyhall-online-applications.component';
 import { BookmyhallLoginComponent } from './bookmyhall-login/bookmyhall-login.component';
+import { BookmyhallPhotoGalleryComponent } from './bookmyhall-photo-gallery/bookmyhall-photo-gallery.component';
+
+import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall-contact-us.component';
+import { BookmyhallNewspaperComponent } from './bookmyhall-newspaper/bookmyhall-newspaper.component';
+import { BookmyhallMinisterProfileComponent } from './bookmyhall-minister-profile/bookmyhall-minister-profile.component';
+import { BookmyhallAssociatedOrganisationsComponent } from './bookmyhall-associated-organisations/bookmyhall-associated-organisations.component';
+import { BookmyhallWhosWhoComponent } from './bookmyhall-whos-who/bookmyhall-whos-who.component';
+import { BookmyhallDirectorsListComponent } from './bookmyhall-directors-list/bookmyhall-directors-list.component';
+import { BookmyhallCitizenCharterComponent } from './bookmyhall-citizen-charter/bookmyhall-citizen-charter.component';
 const routes: Routes = 
 [
   {
@@ -55,7 +64,33 @@ const routes: Routes =
   },
   {
     path:'profile',component:BookmyhallProfileComponent
+  },
+  {
+    path:'photo-gallery',component:BookmyhallPhotoGalleryComponent
+  },
+  {
+    path:'minister-profile',component:BookmyhallMinisterProfileComponent
+  },
+  {
+    path:'associated-organisations',component:BookmyhallAssociatedOrganisationsComponent
+  },
+  {
+    path:'whos-who',component:BookmyhallWhosWhoComponent
+  },
+  {
+    path:'directors-list',component:BookmyhallDirectorsListComponent
+  },
+  {
+    path:'citizen-charter',component:BookmyhallCitizenCharterComponent
+  },
+  {
+    path:'newspaper',component:BookmyhallNewspaperComponent
+  },
+  {
+    path:'contact-us',component:BookmyhallContactUsComponent
   }
+  
+
 ];
 
 @NgModule({
