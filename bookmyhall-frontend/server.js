@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 
 //Bring in the data model
-r//equire('./app/config/passport');
+//require('./app/config/passport');
 
 // Bring in the routes for the API (delete the default routes)
-var routesApi = require('./bookmyhall-backend/routes/users');
+var routesApi = require('../bookmyhall-backend/routes/users');
 
 const app = express();
 
