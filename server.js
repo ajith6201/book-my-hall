@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 
 //Bring in the data model
-require('./app/config/passport');
+r//equire('./app/config/passport');
 
 // Bring in the routes for the API (delete the default routes)
-var routesApi = require('./app/routes/index');
+var routesApi = require('./bookmyhall-backend/routes/users');
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use(cors());
 //Initialise Passport before using the route middleware
 app.use(passport.initialize());
 //Use the API routes when path starts with /api
-app.use('/app', routesApi);
+app.use('/bookmyhall-backend', routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
