@@ -30,5 +30,4 @@ export class BookmyhallProfileComponent implements OnInit {
   {
    
   }
-
 }

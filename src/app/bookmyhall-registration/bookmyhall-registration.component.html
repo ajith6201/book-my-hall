@@ -8,22 +8,26 @@
     </div>
     <div style="padding:15px 25px">
     <div class="form-group">
-        <span class="span-ico"><i class="fa fa-envelope"></i></span><input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <span class="md-displayflex"><span class="span-ico"><i class="fa fa-envelope"></i></span><input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </span>
       <small id="emailHelp" class="form-text text-muted"></small>
       <span *ngIf="isValid('email')">Entered email is invalid</span>
     </div>
     <div class="form-group">
-        <span class="span-ico"><i class="fa fa-user"></i></span><input formControlName="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="userHelp" placeholder="username">
+        <span class="md-displayflex"><span class="span-ico"><i class="fa fa-user"></i></span><input formControlName="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="userHelp" placeholder="username">
+        </span>
         <small id="userHelp" class="form-text text-muted"></small>
         <span *ngIf="isValid('username')">Username is required</span>
     </div>
     <div class="form-group">
-      <span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
+      <span class="md-displayflex"><span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
+      </span>
       <small id="passHelp" class="form-text text-muted"></small>
       <span *ngIf="isValid('password')">Password is a mandatory field</span>
     </div>
     <div class="form-group">
-        <span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="cpass" type="password" class="form-control" id="CpasswordInput" aria-describedby="CpassHelp" placeholder="password">
+        <span class="md-displayflex"><span class="span-ico"><i class="fa fa-lock"></i></span><input formControlName="cpass" type="password" class="form-control" id="CpasswordInput" aria-describedby="CpassHelp" placeholder="password">
+        </span>
         <small id="CpassHelp" class="form-text text-muted"></small>
         <span *ngIf="isValid('cpass')">Password and confirm password should match</span>
       </div>

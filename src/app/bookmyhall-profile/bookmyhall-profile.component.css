@@ -2,15 +2,62 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
-
+.btn-secondary {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background: transparent !important;
+  border: none !important;
+  color: #007bff !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
 .sidebar {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #6d7fcc;
+  background-color: #007bff;
   position: fixed;
   height: 100%;
   overflow: auto;
+}
+.form-radio-item input:checked + label {
+    background-color: #007bff ;
+    color: #FFF;
+    z-index: 1;
+}
+.step{
+  padding: 5% !important;
+}
+.p-b-15{
+  padding-bottom: 15px;
+}
+.form-radio-item input + label {
+  margin: 0px;
+  padding: 7px 10px;
+  width: 80px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f8f8f8;
+  text-align: center;
+  text-transform: none;
+  transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  display: none;
 }
 
 .sidebar a {
@@ -21,12 +68,12 @@ body {
 }
  
 .sidebar a.active {
-  background-color: #7386d5;
+  background-color: #dce3ea6e;
   color: white;
 }
 
 .sidebar a:hover:not(.active) {
-    color: #7386D5;
+    color: #007bff;
     background: #fff;
 }
 
@@ -51,4 +98,173 @@ div.content {
     text-align: center;
     float: none;
   }
+}
+.sw-theme-arrows {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+.heading-in-wizaed{
+  text-align:center !important;
+  text-transform: uppercase;
+}
+.sw-theme-arrows > .sw-container {
+  min-height: 200px;
+}
+
+.sw-theme-arrows .step-content {
+  padding: 0 10px;
+  border: 0px solid #D4D4D4;
+  background-color: #FFF;
+  text-align: left;
+}
+
+.sw-theme-arrows .sw-toolbar {
+  padding: 10px;
+  margin-bottom: 0 !important;
+}
+
+
+.sw-theme-arrows > ul.step-anchor {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 0px;
+  background: #f5f5f5;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.sw-theme-arrows > ul.step-anchor li+li:before {
+  padding: 0;
+}
+
+.sw-theme-arrows > ul.step-anchor > li > a, .sw-theme-arrows > ul.step-anchor > li > a:hover {
+  color: #bbb;
+  text-decoration: none;
+  padding: 10px 0 10px 45px;
+  position: relative;
+  display: block;
+  border: 0 !important;
+  border-radius: 0;
+  outline-style: none;
+  background: #f5f5f5;
+}
+
+.sw-theme-arrows > ul.step-anchor > li > a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #f5f5f5;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.sw-theme-arrows > ul.step-anchor > li > a:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+         /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #ddd;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+
+.sw-theme-arrows > ul.step-anchor > li:first-child > a {
+  padding-left: 15px;
+}
+
+.sw-theme-arrows > ul.step-anchor > li > a:hover {
+  color: #bbb;
+  text-decoration: none;
+  outline-style: none;
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.sw-theme-arrows > ul.step-anchor > li > a:hover:after {
+  border-left-color: #f5f5f5;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.clickable > a:hover {
+  color: #4285F4 !important;
+  background: #46b8da !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.active > a {
+  border-color: #007bff !important;
+  color: #fff !important;
+  background: #007bff !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.active > a:after {
+  border-left: 30px solid #007bff !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.done > a {
+  border-color: #a0a6ab !important;
+  color: #fff !important;
+  background: #a0a6ab !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.done > a:after {
+  border-left: 30px solid #a0a6ab;
+/* c3e6cb */;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.danger > a {
+  border-color: #d9534f !important;
+  color: #fff !important;
+  background: #d9534f !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.danger > a:after {
+  border-left: 30px solid #d9534f !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.disabled > a, .sw-theme-arrows > ul.step-anchor > li.disabled > a:hover {
+  color: #eee !important;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+  .sw-theme-arrows > ul.step-anchor {
+      border: 0;
+      background: #ddd !important;
+  }
+
+  .sw-theme-arrows > .nav-tabs > li {
+      float: none !important;
+      margin-bottom: 0;
+  }
+
+  .sw-theme-arrows > ul.step-anchor > li > a, .sw-theme-arrows > ul.step-anchor > li > a:hover {
+      padding-left: 15px;
+      margin-right: 0;
+      margin-bottom: 1px;
+  }
+
+  .sw-theme-arrows > ul.step-anchor > li > a:after, .sw-theme-arrows > ul.step-anchor > li > a:before {
+      display: none;
+  }
+}
+
+/* Loader Custom Style */
+.sw-theme-arrows::before {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #5cb85c;
 }
