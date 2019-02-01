@@ -56,8 +56,7 @@ import { AuthService } from './services/auth.service';
     BookmyhallWhosWhoComponent,
     BookmyhallDirectorsListComponent,
     BookmyhallCitizenCharterComponent,
-    BookmyhallContactUsComponent,
-    AppConstants  
+    BookmyhallContactUsComponent      
   ],
   imports: [
     BrowserModule,
@@ -67,7 +66,7 @@ import { AuthService } from './services/auth.service';
     HttpClientModule,  
     ReactiveFormsModule
     ],
-  providers: [UserService,UtilityService,AuthService],
+  providers: [UserService,UtilityService,AuthService,AppConstants],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

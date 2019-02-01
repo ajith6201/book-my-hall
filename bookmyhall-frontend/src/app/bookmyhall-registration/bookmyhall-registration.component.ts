@@ -1,6 +1,5 @@
-import { UserService } from './../user.service';
+import { UserService } from '../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/forms';
 import { isError } from 'util';
@@ -21,7 +20,7 @@ export class BookmyhallRegistrationComponent implements OnInit {
     });
 
     successMessage:String='';
-  constructor(private auth: AuthenticationService, private router: Router,private _UserService:UserService,private activatedroute:ActivatedRoute) { 
+  constructor(private router: Router,private _UserService:UserService,private activatedroute:ActivatedRoute) { 
     this.registerForm.controls.password.valueChanges.subscribe(
       x=>this.registerForm.controls.cpass.updateValueAndValidity()
     );

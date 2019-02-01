@@ -1,5 +1,3 @@
-import { AppConstants } from './../app.constants';
-//import { HttpClient, HttpHead}
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class UtilityService {
 
-  constructor(private appConstants:AppConstants) { }
+  constructor() { }
 }
