@@ -1,4 +1,4 @@
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,7 +28,9 @@ import { BookmyhallWhosWhoComponent } from './bookmyhall-whos-who/bookmyhall-who
 import { BookmyhallDirectorsListComponent } from './bookmyhall-directors-list/bookmyhall-directors-list.component';
 import { BookmyhallCitizenCharterComponent } from './bookmyhall-citizen-charter/bookmyhall-citizen-charter.component';
 import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall-contact-us.component';
-
+import { AppConstants } from './app.constants';
+import { UtilityService } from './services/utility.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall
     BookmyhallWhosWhoComponent,
     BookmyhallDirectorsListComponent,
     BookmyhallCitizenCharterComponent,
-    BookmyhallContactUsComponent  
+    BookmyhallContactUsComponent,
+    AppConstants  
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,7 @@ import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall
     HttpClientModule,  
     ReactiveFormsModule
     ],
-  providers: [UserService],
+  providers: [UserService,UtilityService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
