@@ -21,7 +21,8 @@ var cors = require('cors');
 
 //for aws ec2 instance
 app.use(cors({
-  origin:'http://52.14.158.45:4200'
+  //origin:'http://52.14.158.45:4200'
+  origin:'http://localhost:4200'
 }));
 
 
