@@ -1,26 +1,225 @@
-
-<form id="regForm" action="/action_page.php">
-    <h1>Hall booking</h1>
-    <!-- One "tab" for each step in the form: -->
-    <div class="tab">Select Hall
-    <p> <input type="text" placeholder="Enter your City Name" value="" class="form-control " tabindex="1" required=""></p>
-    <p> <select class="country form-control " required="">
-                                  <option value="" selected="">Hall1 </option>
-                                  <option value="1">Hall2</option>
-        </select>
-      </p>
-    </div>
-    <div class="tab">Details
-       <p><input placeholder="Name..." oninput="this.className = ''" name="name"></p>
-      <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-      <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-       <p><textarea placeholder="Address"></textarea></p>
+<div class="sidebar">
+    <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="#details"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
+    <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+  </div>
   
-       <p><input placeholder="Aadhaar number..." oninput="this.className = ''" name=""></p>
-       <p><input placeholder="Zip Code..." oninput="this.className = ''" name="Zip code"></p>
-    </div>
-    <div class="tab">Payment
-      <div class="row p-b-15">
+  <div class="content" id="contact" style="padding: 5%">
+    
+  
+      <!-- SmartWizard 1 html -->
+      <div id="smartwizard">
+          <ul style="margin-bottom:20px" >
+              <li><a href="#step-1">Step 1<br /><small>This is step description</small></a></li>
+              <li><a href="#step-2">Step 2<br /><small>This is step description</small></a></li>
+              <li><a href="#step-3">Step 3<br /><small>This is step description</small></a></li>
+              
+          </ul>
+  
+          <div>
+              <div id="step-1" class="step">
+                  <h2 class="heading-in-wizaed">Hall booking</h2>
+                  <div class="row p-b-15" >
+                  <div class="col-sm-12 col-md-6">
+                          <select class="country form-control " id="country" data-ng-model="country" name="country" tabindex="1" required="">
+                                  <option value="" selected="">Select your Country </option>
+                                  <option value="Afghanistan">Afghanistan</option>
+                                  <option value="Albania">Albania</option>
+                                  <option value="Algeria">Algeria</option>
+                                  <option value="Angola">Angola</option>
+                                  <option value="Argentina">Argentina</option>
+                                  <option value="Armenia">Armenia</option>
+                                  <option value="Australia">Australia</option>
+                                  <option value="Austria">Austria</option>
+                                  <option value="Azerbaijan">Azerbaijan</option>
+                                  <option value="Bahamas">Bahamas</option>
+                                  <option value="Bahrain">Bahrain</option>
+                                  <option value="Bangladesh">Bangladesh</option>
+                                  <option value="Barbados">Barbados</option>
+                                  <option value="Belgium">Belgium</option>
+                                  <option value="Bermuda">Bermuda</option>
+                                  <option value="Botswana">Botswana</option>
+                                  <option value="Brazil">Brazil</option>
+                                  <option value="Brunei">Brunei</option>
+                                  <option value="Bulgaria">Bulgaria</option>
+                                  <option value="Cambodia">Cambodia</option>
+                                  <option value="Cameroon">Cameroon</option>
+                                  <option value="Canada">Canada</option>
+                                  <option value="Chile">Chile</option>
+                                  <option value="China">China</option>
+                                  <option value="Colombia">Colombia</option>
+                                  <option value="Costa Rica">Costa Rica</option>
+                                  <option value="Croatia">Croatia</option>
+                                  <option value="Cyprus">Cyprus</option>
+                                  <option value="Czechia">Czechia</option>
+                                  <option value="Denmark">Denmark</option>
+                                  <option value="Dominican Republic">Dominican Republic</option>
+                                  <option value="Ecuador">Ecuador</option>
+                                  <option value="Egypt">Egypt</option>
+                                  <option value="El Salvador">El Salvador</option>
+                                  <option value="Estonia">Estonia</option>
+                                  <option value="Ethiopia">Ethiopia</option>
+                                  <option value="Fiji">Fiji</option>
+                                  <option value="Finland">Finland</option>
+                                  <option value="France">France</option>
+                                  <option value="Georgia">Georgia</option>
+                                  <option value="Germany">Germany</option>
+                                  <option value="Ghana">Ghana</option>
+                                  <option value="Greece">Greece</option>
+                                  <option value="Guatemala">Guatemala</option>
+                                  <option value="Guyana">Guyana</option>
+                                  <option value="Honduras">Honduras</option>
+                                  <option value="Hong Kong">Hong Kong</option>
+                                  <option value="Hungary">Hungary</option>
+                                  <option value="India">India</option>
+                                  <option value="Indonesia">Indonesia</option>
+                                  <option value="Iran">Iran</option>
+                                  <option value="Iraq">Iraq</option>
+                                  <option value="Ireland">Ireland</option>
+                                  <option value="Israel">Israel</option>
+                                  <option value="Italy">Italy</option>
+                                  <option value="Ivory Coast">Ivory Coast</option>
+                                  <option value="Jamaica">Jamaica</option>
+                                  <option value="Japan">Japan</option>
+                                  <option value="Jordan">Jordan</option>
+                                  <option value="Kazakhstan">Kazakhstan</option>
+                                  <option value="Kenya">Kenya</option>
+                                  <option value="Kosovo">Kosovo</option>
+                                  <option value="Kuwait">Kuwait</option>
+                                  <option value="Latvia">Latvia</option>
+                                   <option value="Lebanon">Lebanon</option>
+                                  <option value="Lesotho">Lesotho</option>
+                                  <option value="Libya">Libya</option>
+                                  <option value="Lithuania">Lithuania</option>
+                                  <option value="Luxembourg">Luxembourg</option>
+                                  <option value="Macedonia">Macedonia</option>
+                                  <option value="Malawi">Malawi</option>
+                                  <option value="Malaysia">Malaysia</option>
+                                  <option value="Maldives">Maldives</option>
+                                  <option value="Malta">Malta</option>
+                                  <option value="Mauritius">Mauritius</option>
+                                  <option value="Mexico">Mexico</option>
+                                  <option value="Moldova">Moldova</option>
+                                  <option value="Mongolia">Mongolia</option>
+                                  <option value="Morocco">Morocco</option>
+                                  <option value="Mozambique">Mozambique</option>
+                                  <option value="Myanmar">Myanmar</option>
+                                  <option value="Namibia">Namibia</option>
+                                  <option value="Nepal">Nepal</option>
+                                  <option value="Netherlands">Netherlands</option>
+                                  <option value="New Zealand">New Zealand</option>
+                                  <option value="Nigeria">Nigeria</option>
+                                  <option value="Norway">Norway</option>
+                                  <option value="Oman">Oman</option>
+                                  <option value="Pakistan">Pakistan</option>
+                                  <option value="Panama">Panama</option>
+                                  <option value="Paraguay">Paraguay</option>
+                                  <option value="Peru">Peru</option>
+                                  <option value="Philippines">Philippines</option>
+                                  <option value="Poland">Poland</option>
+                                  <option value="Portugal">Portugal</option>
+                                  <option value="Puerto Rico">Puerto Rico</option>
+                                  <option value="Qatar">Qatar</option>
+                                  <option value="Romania">Romania</option>
+                                  <option value="Russia">Russia</option>
+                                  <option value="Rwanda">Rwanda</option>
+                                  <option value="Saudi Arabia">Saudi Arabia</option>
+                                   <option value="Senegal">Senegal</option>
+                                  <option value="Serbia">Serbia</option>
+                                  <option value="Singapore">Singapore</option>
+                                  <option value="Slovak Republic">Slovak Republic</option>
+                                  <option value="Slovenia">Slovenia</option>
+                                  <option value="South Africa">South Africa</option>
+                                  <option value="South Korea">South Korea</option>
+                                  <option value="Spain">Spain</option>
+                                  <option value="Sri Lanka">Sri Lanka</option>
+                                  <option value="Sudan">Sudan</option>
+                                  <option value="Sweden">Sweden</option>
+                                  <option value="Switzerland">Switzerland</option>
+                                  <option value="Taiwan">Taiwan</option>
+                                  <option value="Tanzania">Tanzania</option>
+                                  <option value="Thailand">Thailand</option>
+                                  <option value="Trinidad And Tobago">Trinidad And Tobago</option>
+                                  <option value="Tunisia">Tunisia</option>
+                                  <option value="Turkey">Turkey</option>
+                                  <option value="Uganda">Uganda</option>
+                                  <option value="Ukraine">Ukraine</option>
+                                  <option value="United Arab Emirates">United Arab Emirates</option>
+                                  <option value="United Kingdom">United Kingdom</option>
+                                  <option value="United States">United States</option>
+                                  <option value="Uruguay">Uruguay</option>
+                                  <option value="Uzbekistan">Uzbekistan</option>
+                                  <option value="Vietnam">Vietnam</option>
+                                  <option value="Zambia">Zambia</option>
+                                  <option value="Zimbabwe">Zimbabwe</option>
+                                  </select>
+                          
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                          <input type="text" name="city" data-ng-model="city" placeholder="Enter your City Name" value="" class="form-control " tabindex="1" required="">
+                  </div>
+              </div>
+              </div>
+              <div id="step-2" class="step">
+                      <h2 class="heading-in-wizaed">Details</h2>
+                  <div class="row p-b-15">
+                      <div class="col-sm-12 col-md-6">
+                              <div class="form-holder">
+                                      <label for="gender"> Name</label>
+                                      <input type="text" placeholder="Enter Name" class="form-control" id="first_name" name="first_name">
+                                  </div>
+                           
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                              <div class="form-holder">
+                                      <div id="radio">
+                                          <label for="gender">Gender:</label>
+                                          <div class="form-radio-item m-t-5">
+                                                  <input type="radio" name="gender" value="male" id="male" checked="checked" class="valid">
+                                                  <label for="male" class="gender-label" style="border-right: 1px solid #ddd;">Male</label>
+                                                  <input type="radio" name="gender" value="female" id="female" class="valid" aria-invalid="false">
+                                                  <label for="female" class="gender-label">Female</label>
+                                               </div>
+                                      </div>
+                                  </div>
+                               
+                      </div>
+                  </div>
+                  <div class="row p-b-15">
+                          <div class="col-sm-12 col-md-6">
+                                  <div class="form-holder">
+                                          <label for="phone">Phone Number</label>
+                                          <input type="text" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone">
+                                      </div>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                                  <div class="form-holder">
+                                  <label for="phone">Aadhaar No</label>
+                                  <input type="text" placeholder="Aadhaar No" class="form-control">
+                                  </div>
+                              </div>
+                      </div>
+                  <div class="row p-b-15">
+                          <div class="col-sm-12 col-md-6">
+                              <div class="form-holder">
+                                      <label for="phone">Address</label>
+                                      <input type="text" placeholder="622 Dixie Path, South Tobinchester, UT 98336" class="form-control" id="address" name="address">
+                                   
+                                  </div>
+                                  
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                                  <div class="form-holder">
+                                          <label for="code">Zip Code</label>
+                                          <input type="text" class="form-control" id="code" name="code">
+                                      </div>
+                          </div>
+                      </div>
+                      
+              </div>
+              <div id="step-3" class="step">
+                      <h2 class="heading-in-wizaed">Payment Detail</h2>
+                      <div class="row p-b-15">
                               <div class="col-sm-12 col-md-6">
                                   <div class="form-holder">
                                       <label for="code">Card Type</label>
@@ -60,22 +259,23 @@
                                       </div>
                                   </div>
                               </div>
-    </div>
-    <div class="tab">Payment
-      <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-      <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-    </div>
-    <div style="overflow:auto;">
-      <div style="float:right;">
-        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              </div>
+             <!-- <div id="step-4" class="step">
+                <h2>Step 4 Content</h2>
+                <div class="card">
+                    <div class="card-header">My Details</div>
+                    <div class="card-block p-0">
+                      <table class="table">
+                          <tbody>
+                              <tr> <th>Name:</th> <td>Tim Smith</td> </tr>
+                              <tr> <th>Email:</th> <td>example@example.com</td> </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div> -->
+          </div>
       </div>
-    </div>
-    <!-- Circles which indicates the steps of the form: -->
-    <div style="text-align:center;margin-top:40px;">
-      <span class="step">1</span>
-      <span class="step">2</span>
-      <span class="step">3</span>
-      <span class="step">4</span>
-    </div>
-  </form>
+  
+  </div>
+  
