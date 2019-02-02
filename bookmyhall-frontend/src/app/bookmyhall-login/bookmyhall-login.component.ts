@@ -1,8 +1,7 @@
 import { FormGroup,FormControl,Validators,AbstractControl } from '@angular/forms';
-import { AuthenticationService } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
 
 
 @Component({
@@ -19,7 +18,7 @@ export class BookmyhallLoginComponent implements OnInit {
     }
   );
 
-  constructor(private auth: AuthenticationService, private router: Router,private activatedroute:ActivatedRoute,private _UserService:UserService) { }
+  constructor(private router: Router,private activatedroute:ActivatedRoute,private _UserService:UserService) { }
 
   ngOnInit() {
   }

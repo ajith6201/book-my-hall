@@ -15,15 +15,14 @@ mongoose.connect('mongodb://localhost:27017/bookmyhall', {useNewUrlParser: true}
 
 //add cors request
 var cors = require('cors');
-// app.use(cors({
-//   origin:'http://localhost:4200'
-// }));
-
-//for aws ec2 instance
 app.use(cors({
-  //origin:'http://52.14.158.45:4200'
   origin:'http://localhost:4200'
 }));
+
+//for aws ec2 instance
+// app.use(cors({
+//   origin:'http://52.14.158.45:4200'
+// }));
 
 
 // view engine setup

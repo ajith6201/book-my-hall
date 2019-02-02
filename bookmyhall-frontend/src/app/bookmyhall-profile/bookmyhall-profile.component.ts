@@ -1,4 +1,4 @@
-import { UserService } from './../user.service';
+import { UserService } from '../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 
@@ -16,6 +16,7 @@ export class BookmyhallProfileComponent implements OnInit {
       data=> this.username = data.toString(),
       error=> router.navigate(['/login'])
     );    
+    
    }
 
   
@@ -28,6 +29,7 @@ export class BookmyhallProfileComponent implements OnInit {
 
   ngOnInit() 
   {
-   
+    
   }
+
 }
