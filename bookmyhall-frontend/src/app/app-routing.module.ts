@@ -1,3 +1,5 @@
+import { HallslistComponent } from './hallslist/hallslist.component';
+import { CityComponent } from './city/city.component';
 import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
 import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
 import { NgModule } from '@angular/core';
@@ -88,6 +90,12 @@ const routes: Routes =
   },
   {
     path:'contact-us',component:BookmyhallContactUsComponent
+  },
+  {
+    path:'city',component:CityComponent
+  },
+  {
+    path:'halls-list',component:HallslistComponent
   }
   
 
