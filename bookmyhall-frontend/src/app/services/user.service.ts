@@ -14,7 +14,6 @@ export class UserService {
   
   register(body:any)
   {
-    //console.log(body);
     return this._http.post(this.url+'/register',body,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
@@ -38,19 +37,4 @@ export class UserService {
   {
     return (localStorage.getItem('token')!== null);
   }
-
-  assets(body:any)
-  {
-    //console.log(body);
-    return this._http.post(this.url+'/assets',body,{
-      observe:'body',
-      headers: new HttpHeaders().append('Content-Type','application/json')
-    });
-  }
-  // getObjectId()
-  // {
-  //   return this._http.get(this.url+'/getobjectid',{
-  //     observe:'body'      
-  //   });
-  // }
 }

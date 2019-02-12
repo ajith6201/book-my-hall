@@ -31,8 +31,6 @@ import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall
 import { AppConstants } from './app.constants';
 import { UtilityService } from './services/utility.service';
 import { AuthService } from './services/auth.service';
-import { CityComponent } from './city/city.component';
-import { HallslistComponent } from './hallslist/hallslist.component';
 
 @NgModule({
   declarations: [
@@ -58,9 +56,7 @@ import { HallslistComponent } from './hallslist/hallslist.component';
     BookmyhallWhosWhoComponent,
     BookmyhallDirectorsListComponent,
     BookmyhallCitizenCharterComponent,
-    BookmyhallContactUsComponent,
-    CityComponent,
-    HallslistComponent      
+    BookmyhallContactUsComponent      
   ],
   imports: [
     BrowserModule,
