@@ -19,8 +19,14 @@ export class BookmyhallProfileComponent implements OnInit {
     
    }
 
-  
-
+   slidemenu()
+  {       
+      document.getElementById("slideid").style.display="block";
+      
+  }
+  closemenu(){
+document.getElementById("slideid").style.display="none";
+  }
    logout()
    {
       localStorage.removeItem('token');

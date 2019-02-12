@@ -212,3 +212,51 @@ button:hover {
 .text-center{
   text-align:center
 }
+.mobile-menu{
+  display:none;
+}
+.closeicon{
+  display: none
+}
+@media only screen and (max-width: 760px) {
+  .container {
+    position: relative;
+    margin: 0 auto;
+    left:0px;
+  }
+  .main {
+    padding: 35px 0;
+  }
+  .sidebar{
+    display:none;
+    z-index:1;
+  }
+  .mobile-menu{
+    display:block;
+    background:#007bff !important;
+    height: 45px;
+  }
+  .mobile-menu span{
+    color:white;
+    float: right;
+    width: 55px;
+    margin: 8px 0;
+    
+  }
+  .closeicon{
+    color: white;
+    float: right;
+    width: 35px;
+    margin: 0px 0;
+    border: 1px solid white;
+    height: 38px;
+    padding: 5px 16px 0 10px;
+    display: block;
+}
+.form-heading {
+  text-align: center !important;
+  padding: 15px !important;
+  text-transform: uppercase;
+  font-size: 29px;
+}
+}
