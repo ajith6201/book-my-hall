@@ -15,7 +15,7 @@ export class AppComponent {
     router.events.forEach((event)=>{
       if(event instanceof NavigationStart)
       {
-        if(event['url']==='/login' || event['url']==='/register' || event['url']==='/profile')
+        if(event['url']==='/login' || event['url']==='/register' || event['url']==='/profile' || event['url']==='/city')
         {
           this.showHead = false;
         }
