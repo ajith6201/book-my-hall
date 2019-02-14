@@ -14,7 +14,6 @@ export class UserService {
   
   register(body:any)
   {
-    //console.log(body);
     return this._http.post(this.url+'/register',body,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
