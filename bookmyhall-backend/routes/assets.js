@@ -17,7 +17,7 @@ router.post('/assets',function(req,res,next)
         status:req.body.status,
         created_datetime:Date.now()
     });
-//console.log(req.body);
+console.log(req.body);
     let promise = asset.save();
 
     promise.then(function(doc)
