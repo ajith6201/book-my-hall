@@ -38,8 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/users', assetsRouter);
-app.use('/users',cityRouter);
-app.use('/users',hallRouter);
+app.use('/cities',cityRouter);
+app.use('/halls',hallRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

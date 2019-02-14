@@ -46,12 +46,10 @@ export class UserService {
       headers: new HttpHeaders().append('Content-Type','application/json')
     });
   }
-  
-  city(body:any)
-  {
-    return this._http.post(this.url+'/cities',body,{
-      observe:'body',
-      headers:new HttpHeaders().append('Content-Type','application/json')
-    });
-  }
+  // getObjectId()
+  // {
+  //   return this._http.get(this.url+'/getobjectid',{
+  //     observe:'body'      
+  //   });
+  // }
 }
