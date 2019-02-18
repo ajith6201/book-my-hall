@@ -19,11 +19,14 @@
         <div class="col-md-5">
             <div class="card">
               <div class="card-body">
-                <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-                  <div class="input-group mb-3">      
-                    <input type="text" class="form-control" name="city_name" ngModel placeholder="City" #city_name="ngModel">
+                <form [formGroup]="cityForm">
+                  <div class="form-group">
+                    <span class="md-displayflex"><span class="span-ico"></span><input formControlName="city_name"  type="text" class="form-control" id="exmpleCity" aria-describedby="cityHelp" placeholder="Enter City">
+                    </span>
+                    <small id="cityHelp" class="form-text text-muted"></small>
+                    <span *ngIf="isValid('city_name')">Entered city is invalid</span>
                   </div>
-                  <input class="btn btn-success" type="submit" value="Submit">
+                  <input class="btn btn-success" type="submit" value="Submit" (click)="postCity()">
                 </form>
               </div>
             </div>
@@ -31,40 +34,29 @@
                 {{successMessage}}
             </div>
         </div>        
-        <div class="col-md-6">
+       
+        <div class="col-md-6">  
             <table class="table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">City Name</th>    
+                    <th>Edit</th>
+                    <th>Delete</th>                
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                  <tr *ngFor="let city of cities">
+                    <th scope="row">{{city._id}}</th>
+                    <td>{{city.city_name}}</td>
+                    <td>Edit</td>
+                    <td (click)="onDelete(city._id)">Delete</td>
                   </tr>
                 </tbody>
               </table>
         </div>
     </div>
   </div>  
-
 
 </div>
 

@@ -50,9 +50,21 @@ export class UserService {
   
   city(body:any)
   {
+    //console.log(body);
     return this._http.post(this.url+'/cities',body,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
     });
+  }
+  getCities()
+  {
+    return this._http.get(this.url+'/getcities',{
+      observe:'body'     
+    });
+  }
+
+  deleteCity(_id:String)
+  {
+    return this._http.delete(this.url+`/deleteCity/${_id}`);
   }
 }

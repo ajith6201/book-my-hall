@@ -18,7 +18,9 @@ router.post('/register',function(req,res,next)
     creation_dt: Date.now()
   });
  // console.log(req.body);
-  let promise = user.save();
+  let promise = user.save(function (err) {
+    console.log(err);
+});
 
   promise.then(function(doc)
   {
