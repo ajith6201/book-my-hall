@@ -15,11 +15,7 @@ export class AppComponent {
     router.events.forEach((event)=>{
       if(event instanceof NavigationStart)
       {
-<<<<<<< HEAD
-        if(event['url']==='/login' || event['url']==='/register' || event['url']==='/profile')
-=======
         if(event['url']==='/login' || event['url']==='/register' || event['url']==='/profile' || event['url']==='/city' || event['url']==='/booking-details')
->>>>>>> book-my-hall-branch
         {
           this.showHead = false;
         }

@@ -1,8 +1,7 @@
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
-import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/forms';
-
 
 @Component({
   selector: 'app-bookmyhall-profile',
@@ -12,7 +11,9 @@ import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/form
 export class BookmyhallProfileComponent implements OnInit {
 
   username = '';
+  objectId = '';
   loggedIn= '';
+  successMessage:String='';
   constructor(private UserService:UserService,private router:Router) {
     this.UserService.getUsername().subscribe(
       data=> this.username = data.toString(),
@@ -35,14 +36,6 @@ export class BookmyhallProfileComponent implements OnInit {
   });
   
 
-   slidemenu()
-  {       
-      document.getElementById("slideid").style.display="block";
-      
-  }
-  closemenu(){
-document.getElementById("slideid").style.display="none";
-  }
    logout()
    {
       localStorage.removeItem('token');
@@ -52,6 +45,23 @@ document.getElementById("slideid").style.display="none";
   ngOnInit() 
   {
     console.log(this.username+"huhu");
+  }
+
+  asset()
+  {
+   var userId = this.username;
+
+    console.log(this.assetsForm.value);
+    // console.log(this.assetsForm.value.userId);
+    // console.log(userId);
+    this.assetsForm.value.user_id = userId;
+    this.assetsForm.value.status = "0";
+    this.UserService.assets(this.assetsForm.value).subscribe(
+      data=>this.successMessage = 'Record Saved Successfully',
+      error=>this.successMessage= 'Unable to Save Record'
+    );
+
+    this.assetsForm.reset();
   }
 
 }

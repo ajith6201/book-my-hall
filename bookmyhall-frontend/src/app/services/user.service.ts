@@ -14,6 +14,7 @@ export class UserService {
   
   register(body:any)
   {
+    //console.log(body);
     return this._http.post(this.url+'/register',body,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
@@ -46,14 +47,6 @@ export class UserService {
       headers: new HttpHeaders().append('Content-Type','application/json')
     });
   }
-<<<<<<< HEAD
-  // getObjectId()
-  // {
-  //   return this._http.get(this.url+'/getobjectid',{
-  //     observe:'body'      
-  //   });
-  // }
-=======
   
   city(body:any)
   {
@@ -79,5 +72,4 @@ export class UserService {
   {
     return this._http.get(this.url+`/booking-details/${_id}`);
   }
->>>>>>> book-my-hall-branch
 }

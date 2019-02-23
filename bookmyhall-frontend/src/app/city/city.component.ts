@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-=======
 import { Router } from '@angular/router';
 import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/forms';
 
->>>>>>> book-my-hall-branch
 
 @Component({
   selector: 'app-city',
@@ -14,12 +10,6 @@ import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/form
   styleUrls: ['./city.component.css']
 })
 export class CityComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor() { }
-
-  ngOnInit() {
-=======
   cityForm:FormGroup = new FormGroup(
     {
       city_name: new FormControl(null,[Validators.required]),
@@ -70,7 +60,6 @@ export class CityComponent implements OnInit {
   {
      localStorage.removeItem('token');
      this.router.navigate(['/login']);
->>>>>>> book-my-hall-branch
   }
 
 }

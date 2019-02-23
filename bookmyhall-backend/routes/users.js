@@ -17,14 +17,10 @@ router.post('/register',function(req,res,next)
     password: User.hashPassword(req.body.password),
     creation_dt: Date.now()
   });
-<<<<<<< HEAD
-  let promise = user.save();
-=======
  // console.log(req.body);
   let promise = user.save(function (err) {
     console.log(err);
 });
->>>>>>> book-my-hall-branch
 
   promise.then(function(doc)
   {
@@ -45,7 +41,7 @@ router.post('/login', function(req,res,next){
    if(doc) {
      if(doc.isValid(req.body.password)){
          // generate token
-         let token = jwt.sign({username:doc.username},'secret', {expiresIn : '3h'});
+         let token = jwt.sign({username:doc._id},'secret', {expiresIn : '3h'});
 
          return res.status(200).json(token);
 
@@ -75,7 +71,7 @@ function verifyToken(req,res,next)
   jwt.verify(token,'secret',function(err,tokenData){
     if(err)
     {
-      returnres.status(400).json({message:' Unauthorized request'});
+      return res.status(400).json({message:' Unauthorized request'});
     }
     if(tokenData)
     {
@@ -84,4 +80,8 @@ function verifyToken(req,res,next)
     }
   });
 }
+
+// router.get('/getobjectid',function(req,res,next){
+//   return res.status(200).json(_id);
+// });
 module.exports = router;
