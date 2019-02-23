@@ -17,7 +17,14 @@ router.post('/register',function(req,res,next)
     password: User.hashPassword(req.body.password),
     creation_dt: Date.now()
   });
+<<<<<<< HEAD
   let promise = user.save();
+=======
+ // console.log(req.body);
+  let promise = user.save(function (err) {
+    console.log(err);
+});
+>>>>>>> book-my-hall-branch
 
   promise.then(function(doc)
   {

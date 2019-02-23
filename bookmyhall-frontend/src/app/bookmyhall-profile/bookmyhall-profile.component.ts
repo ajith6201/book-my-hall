@@ -1,6 +1,8 @@
 import { UserService } from '../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+import { FormGroup,FormControl,Validators, AbstractControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-bookmyhall-profile',
@@ -17,7 +19,21 @@ export class BookmyhallProfileComponent implements OnInit {
       error=> router.navigate(['/login'])
     );    
     
+    
    }
+   
+   
+   assetsForm:FormGroup = new FormGroup({
+    name: new FormControl(null,[Validators.required]),
+    gender:new FormControl(null,[Validators.required]),
+    phone_no: new FormControl(null,[Validators.required]),
+    id_proof: new FormControl(null,[Validators.required]),
+    address: new FormControl(null,[Validators.required]),
+    zipcode: new FormControl(null,[Validators.required]),
+    city: new FormControl(null,[Validators.required]),
+    hall_name:new FormControl(null,[Validators.required])        
+  });
+  
 
    slidemenu()
   {       
@@ -35,7 +51,7 @@ document.getElementById("slideid").style.display="none";
 
   ngOnInit() 
   {
-    
+    console.log(this.username+"huhu");
   }
 
 }

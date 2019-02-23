@@ -1,3 +1,68 @@
+<<<<<<< HEAD
 <p>
   city works!
 </p>
+=======
+<div class="row">
+  <div class="col-md-2">
+    <div class="sidebar">
+      <a routerLinkActive="active" [routerLink]="['/profile']"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a routerLinkActive="active" [routerLink]="['/booking-details']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
+      <a routerLinkActive="active" [routerLink]="['/city']"><i class="fa fa-fw fa-list"></i>Add City</a> 
+      <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <br>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <form [formGroup]="cityForm">
+                  <div class="form-group">
+                    <span class="md-displayflex"><span class="span-ico"></span><input formControlName="city_name"  type="text" class="form-control" id="exmpleCity" aria-describedby="cityHelp" placeholder="Enter City">
+                    </span>
+                    <small id="cityHelp" class="form-text text-muted"></small>
+                    <span *ngIf="isValid('city_name')">Entered city is invalid</span>
+                  </div>
+                  <input class="btn btn-success" type="submit" value="Submit" (click)="postCity()">
+                </form>
+              </div>
+            </div>
+            <div style="text-align: center;">                
+                {{successMessage}}
+            </div>
+        </div>        
+       
+        <div class="col-md-6">  
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">City Name</th>    
+                    <th>Edit</th>
+                    <th>Delete</th>                
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let city of cities">
+                    <th scope="row">{{city._id}}</th>
+                    <td>{{city.city_name}}</td>
+                    <td>Edit</td>
+                    <td (click)="onDelete(city._id)">Delete</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div>  
+
+</div>
+
+>>>>>>> book-my-hall-branch

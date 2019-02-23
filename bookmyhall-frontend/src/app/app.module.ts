@@ -31,6 +31,12 @@ import { BookmyhallContactUsComponent } from './bookmyhall-contact-us/bookmyhall
 import { AppConstants } from './app.constants';
 import { UtilityService } from './services/utility.service';
 import { AuthService } from './services/auth.service';
+<<<<<<< HEAD
+=======
+import { CityComponent } from './city/city.component';
+import { HallslistComponent } from './hallslist/hallslist.component';
+import { BookmyhallBookingDetailsComponent } from './bookmyhall-booking-details/bookmyhall-booking-details.component';
+>>>>>>> book-my-hall-branch
 
 @NgModule({
   declarations: [
@@ -56,7 +62,14 @@ import { AuthService } from './services/auth.service';
     BookmyhallWhosWhoComponent,
     BookmyhallDirectorsListComponent,
     BookmyhallCitizenCharterComponent,
+<<<<<<< HEAD
     BookmyhallContactUsComponent      
+=======
+    BookmyhallContactUsComponent,
+    CityComponent,
+    HallslistComponent,
+    BookmyhallBookingDetailsComponent      
+>>>>>>> book-my-hall-branch
   ],
   imports: [
     BrowserModule,
