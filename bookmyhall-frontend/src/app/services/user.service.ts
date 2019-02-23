@@ -67,4 +67,9 @@ export class UserService {
   {
     return this._http.delete(this.url+`/deleteCity/${_id}`);
   }
+
+  getAssets(_id:String)
+  {
+    return this._http.get(this.url+`/booking-details/${_id}`);
+  }
 }

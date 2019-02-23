@@ -17,7 +17,7 @@ router.post('/assets',function(req,res,next)
         status:req.body.status,
         created_datetime:Date.now()
     });
-console.log(req.body);
+//console.log(req.body);
     let promise = asset.save();
 
     promise.then(function(doc)
@@ -30,4 +30,9 @@ console.log(req.body);
     });
 });
 
+router.get('/getAssets',function(req,res,next){
+    Assets.find()
+    .then(assets=>{res.json(assets);})
+    .catch(err=>{res.status(500).send({msg:err.message});})
+});
 module.exports = router;

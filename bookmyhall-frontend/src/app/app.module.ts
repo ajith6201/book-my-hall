@@ -33,6 +33,7 @@ import { UtilityService } from './services/utility.service';
 import { AuthService } from './services/auth.service';
 import { CityComponent } from './city/city.component';
 import { HallslistComponent } from './hallslist/hallslist.component';
+import { BookmyhallBookingDetailsComponent } from './bookmyhall-booking-details/bookmyhall-booking-details.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { HallslistComponent } from './hallslist/hallslist.component';
     BookmyhallCitizenCharterComponent,
     BookmyhallContactUsComponent,
     CityComponent,
-    HallslistComponent      
+    HallslistComponent,
+    BookmyhallBookingDetailsComponent      
   ],
   imports: [
     BrowserModule,

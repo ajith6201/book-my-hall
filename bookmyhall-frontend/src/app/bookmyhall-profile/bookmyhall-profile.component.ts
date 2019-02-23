@@ -19,9 +19,11 @@ export class BookmyhallProfileComponent implements OnInit {
       data=> this.username = data.toString(),
       error=> router.navigate(['/login'])
     );    
-
+    
     
    }
+   
+   
    assetsForm:FormGroup = new FormGroup({
     name: new FormControl(null,[Validators.required]),
     gender:new FormControl(null,[Validators.required]),
@@ -42,7 +44,7 @@ export class BookmyhallProfileComponent implements OnInit {
 
   ngOnInit() 
   {
-    
+    console.log(this.username+"huhu");
   }
 
   asset()

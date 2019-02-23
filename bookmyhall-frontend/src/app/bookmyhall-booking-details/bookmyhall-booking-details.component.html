@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-2">
+    <div class="sidebar">
+      <a routerLinkActive="active" [routerLink]="['/profile']"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a routerLinkActive="active" [routerLink]="['/booking-details']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
+      <a routerLinkActive="active" [routerLink]="['/city']"><i class="fa fa-fw fa-list"></i>Add City</a> 
+      <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <br>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Details</li>
+          </ol>
+        </nav>
+    <div class="row">
+      Welcome {{username}}!
+       
+    </div>
+  </div>  
+
+</div>
+
