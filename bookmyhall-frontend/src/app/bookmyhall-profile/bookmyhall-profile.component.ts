@@ -13,6 +13,7 @@ export class BookmyhallProfileComponent implements OnInit {
   username = '';
   objectId = '';
   loggedIn= '';
+  cities:any ;
   successMessage:String='';
   constructor(private UserService:UserService,private router:Router) {
     this.UserService.getUsername().subscribe(
@@ -44,7 +45,7 @@ export class BookmyhallProfileComponent implements OnInit {
 
   ngOnInit() 
   {
-    console.log(this.username+"huhu");
+    this.UserService.getCities().subscribe(data=>this.cities = data);
   }
 
   asset()
@@ -63,5 +64,7 @@ export class BookmyhallProfileComponent implements OnInit {
 
     this.assetsForm.reset();
   }
+
+  
 
 }

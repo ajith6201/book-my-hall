@@ -4,7 +4,7 @@ var Cities = require('../models/cities');
 
 router.post('/cities',function(req,res,next)
 {
-    console.log(req.body);
+    //console.log(req.body);
     var city = new Cities({
         city_name:req.body.city_name
     });

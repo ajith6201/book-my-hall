@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var Halls = require('../models/halls');
-router.post('/halls',function(res,req,next)
+
+router.post('/halls',function(req,res,next)
 {
+    console.log(req.body);
     var hall = new Halls({
+        city_id:req.body.city_id,
         hall_name:req.body.hall_name
     });
 

@@ -72,4 +72,13 @@ export class UserService {
   {
     return this._http.get(this.url+`/booking-details/${_id}`);
   }
+
+  halls(body:any)
+  {    
+    console.log(body);
+    return this._http.post(this.url+'/halls',body,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
 }

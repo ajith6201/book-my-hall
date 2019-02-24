@@ -1,3 +1,66 @@
-<p>
-  hallslist works!
-</p>
+<div class="row">
+  <div class="col-md-2">
+    <div class="sidebar">
+      <a routerLinkActive="active" [routerLink]="['/profile']"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a routerLinkActive="active" [routerLink]="['/booking-details']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
+      <a routerLinkActive="active" [routerLink]="['/city']"><i class="fa fa-fw fa-list"></i>Add City</a> 
+      <a routerLinkActive="active" [routerLink]="['/halls-list']"><i class="fa fa-fw fa-list"></i>Add Halls</a>
+      <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <br>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add Halls</li>
+          </ol>
+        </nav>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <form [formGroup]="hallForm">
+                  <div class="form-group">
+                    <select class="city form-control " id="city_id" data-ng-model="city_id" name="city_id" tabindex="1" required="" formControlName="city_id">                                        
+                        <option *ngFor="let city of cities" [value]="city.city_name">{{city.city_name}}</option>                                        
+                    </select>                  
+                  </div>
+                  <div class="form-group">
+                    <span class="md-displayflex"><span class="span-ico"></span><input formControlName="hall_name"  type="text" class="form-control" id="exmpleHall" aria-describedby="hallHelp" placeholder="Enter Hall">
+                    </span>
+                    <small id="hallHelp" class="form-text text-muted"></small>
+                    <span *ngIf="isValid('hall_name')">Entered hall is invalid</span>
+                  </div>
+                  <input class="btn btn-success" type="submit" value="Submit" (click)="postHall()">
+                </form>
+              </div>
+            </div>
+            <div style="text-align: center;">                
+                {{successMessage}}
+            </div>
+        </div>        
+       
+        <div class="col-md-6">  
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                   
+                    <th scope="col">City Name</th>                        
+                    <th>Delete</th>                
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let city of cities">                    
+                    <td>{{city.city_name}}</td>                    
+                    <td (click)="onDelete(city._id)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div>  
+
+</div>
+

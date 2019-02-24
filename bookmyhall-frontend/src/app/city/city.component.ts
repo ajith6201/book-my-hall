@@ -56,6 +56,7 @@ export class CityComponent implements OnInit {
     }
   }
 
+
   logout()
   {
      localStorage.removeItem('token');

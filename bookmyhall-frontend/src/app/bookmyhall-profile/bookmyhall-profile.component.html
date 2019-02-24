@@ -2,6 +2,7 @@
     <a routerLinkActive="active" [routerLink]="['/profile']"><i class="fa fa-fw fa-home"></i>Home</a>
     <a routerLinkActive="active" [routerLink]="['/booking-details']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
     <a routerLinkActive="active" [routerLink]="['/city']"><i class="fa fa-fw fa-list"></i>Add City</a> 
+    <a routerLinkActive="active" [routerLink]="['/halls-list']"><i class="fa fa-fw fa-list"></i>Add Halls</a>
     <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
   </div>
   <div class="main">
@@ -15,11 +16,8 @@
         <!-- <input type="text" class="form-control"  name="status" value="0" formControlName="status"> -->
                 <div class="row p-b-15" >
                         <div class="col-sm-12 col-md-6">
-                                <select class="city form-control " id="city" data-ng-model="city" name="city" tabindex="1" required="" formControlName="city">
-                                        <option value="" selected="">Select your City </option>
-                                        <option value="option">option1</option>
-                                        <option value="option2">option2</option>
-                                        <option value="option3">option3</option>
+                                <select class="city form-control " id="city" data-ng-model="city" name="city" tabindex="1" required="" formControlName="city">                                        
+                                        <option *ngFor="let city of cities" [value]="city.city_name">{{city.city_name}}</option>                                        
                                  </select>
                                 
                         </div>

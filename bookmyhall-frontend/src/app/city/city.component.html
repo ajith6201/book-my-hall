@@ -4,6 +4,7 @@
       <a routerLinkActive="active" [routerLink]="['/profile']"><i class="fa fa-fw fa-home"></i>Home</a>
       <a routerLinkActive="active" [routerLink]="['/booking-details']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
       <a routerLinkActive="active" [routerLink]="['/city']"><i class="fa fa-fw fa-list"></i>Add City</a> 
+      <a routerLinkActive="active" [routerLink]="['/halls-list']"><i class="fa fa-fw fa-list"></i>Add Halls</a>
       <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
     </div>
   </div>
@@ -39,18 +40,16 @@
             <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">City Name</th>    
-                    <th>Edit</th>
+                   
+                    <th scope="col">City Name</th>                        
                     <th>Delete</th>                
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let city of cities">
-                    <th scope="row">{{city._id}}</th>
-                    <td>{{city.city_name}}</td>
-                    <td>Edit</td>
-                    <td (click)="onDelete(city._id)">Delete</td>
+                  <tr *ngFor="let city of cities">                    
+                    <td>{{city.city_name}}</td>                    
+                    <td (click)="onDelete(city._id)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </td>
                   </tr>
                 </tbody>
               </table>
