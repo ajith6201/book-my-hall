@@ -35,7 +35,7 @@ export class BookmyhallLoginComponent implements OnInit {
       this._UserService.login(this.loginForm.value)
         .subscribe(
           data => {
-            console.log(data);
+            //console.log(data);
             localStorage.setItem('token', data.toString());
             this.router.navigate(['/profile']);
           },

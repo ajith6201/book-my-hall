@@ -14,6 +14,7 @@ export class UserService {
   
   register(body:any)
   {
+    //console.log(body);
     return this._http.post(this.url+'/register',body,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
@@ -36,5 +37,48 @@ export class UserService {
   public get loggedIn():boolean
   {
     return (localStorage.getItem('token')!== null);
+  }
+
+  assets(body:any)
+  {
+    //console.log(body);
+    return this._http.post(this.url+'/assets',body,{
+      observe:'body',
+      headers: new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
+  
+  city(body:any)
+  {
+    //console.log(body);
+    return this._http.post(this.url+'/cities',body,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
+  getCities()
+  {
+    return this._http.get(this.url+'/getcities',{
+      observe:'body'     
+    });
+  }
+
+  deleteCity(_id:String)
+  {
+    return this._http.delete(this.url+`/deleteCity/${_id}`);
+  }
+
+  getAssets(_id:String)
+  {
+    return this._http.get(this.url+`/booking-details/${_id}`);
+  }
+
+  halls(body:any)
+  {    
+    console.log(body);
+    return this._http.post(this.url+'/halls',body,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
   }
 }

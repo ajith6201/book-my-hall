@@ -1,3 +1,5 @@
+import { HallslistComponent } from './hallslist/hallslist.component';
+import { CityComponent } from './city/city.component';
 import { BookmyhallProfileComponent } from './bookmyhall-profile/bookmyhall-profile.component';
 import { BookmyhallRegistrationComponent } from './bookmyhall-registration/bookmyhall-registration.component';
 import { NgModule } from '@angular/core';
@@ -21,7 +23,8 @@ import { BookmyhallAssociatedOrganisationsComponent } from './bookmyhall-associa
 import { BookmyhallWhosWhoComponent } from './bookmyhall-whos-who/bookmyhall-whos-who.component';
 import { BookmyhallDirectorsListComponent } from './bookmyhall-directors-list/bookmyhall-directors-list.component';
 import { BookmyhallCitizenCharterComponent } from './bookmyhall-citizen-charter/bookmyhall-citizen-charter.component';
-import { BookmyhallBookingdetailsComponent } from './bookmyhall-bookingdetails/bookmyhall-bookingdetails.component';
+import { BookmyhallBookingDetailsComponent } from './bookmyhall-booking-details/bookmyhall-booking-details.component';
+
 const routes: Routes = 
 [
   {
@@ -91,7 +94,13 @@ const routes: Routes =
     path:'contact-us',component:BookmyhallContactUsComponent
   },
   {
-    path:'bookingdetails',component:BookmyhallBookingdetailsComponent
+    path:'city',component:CityComponent
+  },
+  {
+    path:'halls-list',component:HallslistComponent
+  },
+  {
+    path:'booking-details',component:BookmyhallBookingDetailsComponent
   }
   
 
