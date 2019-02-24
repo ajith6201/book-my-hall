@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 
 @Component({
-  selector: 'app-bookmyhall-profile',
-  templateUrl: './bookmyhall-profile.component.html',
-  styleUrls: ['./bookmyhall-profile.component.css']
+  selector: 'app-bookmyhall-bookingdetails',
+  templateUrl: './bookmyhall-bookingdetails.component.html',
+  styleUrls: ['./bookmyhall-bookingdetails.component.css']
 })
-export class BookmyhallProfileComponent implements OnInit {
+export class BookmyhallBookingdetailsComponent implements OnInit {
 
   username = '';
   loggedIn= '';
@@ -32,7 +32,7 @@ document.getElementById("slideid").style.display="none";
       localStorage.removeItem('token');
       this.router.navigate(['/login']);
    }
- 
+
   ngOnInit() 
   {
     

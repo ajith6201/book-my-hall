@@ -1,7 +1,7 @@
 <div class="sidebar" id="slideid">
     <span (click)="closemenu()" class="closeicon"><i class="fa fa-times" aria-hidden="true"></i></span>
     <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
-    <a href="#details"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
+    <a  href="#bookingdetails" [routerLink]="['bookingdetails']"><i class="fa fa-fw fa-list"></i>Booking Details</a> 
     <a routerLinkActive="active" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
   </div>
   <div class="row mobile-menu">
@@ -14,6 +14,10 @@
         <br>
         <form >
                 <div class="row p-b-15" >
+                        <div class="col-sm-12 col-md-6">
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="dateOfBirth" class="form-control ">
+                                                
+                        </div>
                         <div class="col-sm-12 col-md-6">
                                 <select class="country form-control " id="country" data-ng-model="country" name="country" tabindex="1" required="">
                                         <option value="" selected="">Select your City </option>
@@ -93,3 +97,13 @@
 
 </div>
 
+<script>
+        var options = null // options are optional
+  , dp = new DatePicker(options)
+  // any of the following two give the same result
+  , element = $('.input')[0]
+  , element = '.input'
+
+dp.show(element);
+console.log(dp.show(element))
+        </script>

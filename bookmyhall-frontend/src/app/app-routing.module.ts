@@ -21,6 +21,7 @@ import { BookmyhallAssociatedOrganisationsComponent } from './bookmyhall-associa
 import { BookmyhallWhosWhoComponent } from './bookmyhall-whos-who/bookmyhall-whos-who.component';
 import { BookmyhallDirectorsListComponent } from './bookmyhall-directors-list/bookmyhall-directors-list.component';
 import { BookmyhallCitizenCharterComponent } from './bookmyhall-citizen-charter/bookmyhall-citizen-charter.component';
+import { BookmyhallBookingdetailsComponent } from './bookmyhall-bookingdetails/bookmyhall-bookingdetails.component';
 const routes: Routes = 
 [
   {
@@ -88,6 +89,9 @@ const routes: Routes =
   },
   {
     path:'contact-us',component:BookmyhallContactUsComponent
+  },
+  {
+    path:'bookingdetails',component:BookmyhallBookingdetailsComponent
   }
   
 
