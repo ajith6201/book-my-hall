@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  url:String = 'http://localhost:3000/users';
+  //url:String = 'http://localhost:3000/users';
+  url:String = '/users';
   //testing for aws ec2 instance
   //url:String = 'http://52.14.158.45:3000/users';
 
